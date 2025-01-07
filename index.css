@@ -36,6 +36,7 @@ img{
 }
 #text-soon{
   padding-left: 250px;
+  font-weight: bold;
 }
 .container {
   display: flex;
