@@ -30,7 +30,13 @@ body {
 a{
   font-size: 20px;
 }
+img{
+  border-radius: 15px;
 
+}
+#text-soon{
+  padding-left: 250px;
+}
 .container {
   display: flex;
   justify-content: space-between;
@@ -109,8 +115,17 @@ a{
   opacity: 1;
 }
 
+
+
 /* Адаптація для малих екранів */
-@media (max-width: 660px) {
+@media (max-width: 768px) {
+  .left-block{
+    order: 1;
+  }
+  .right-block {
+    order: 2;
+  }
+
   .menu-main {
       float: none;
       padding-top: 20px;
