@@ -1,2 +1,2 @@
-Max Games!
-You can download here our games: https://maxmykolenko.github.io/MaxGames/
+Maks Games!
+You can download here our games: https://maksmykolenko.github.io/MaksGames/
