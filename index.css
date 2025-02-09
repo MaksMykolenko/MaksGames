@@ -1,18 +1,17 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap');
 
 body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Permanent Marker", "Roboto", sans-serif;
   background-color: rgb(0, 0, 0); /* Чорний фон */
   color: yellow; /* Жовтий текст */
 }
 
 :root{
-  --sizeindex: calc(1vw + 1vh)
+  --sizeindex: calc(1vw + 1vh);
 }
 
 #background-video {
@@ -24,20 +23,15 @@ body {
   min-height: 100%;
   z-index: -1;
   object-fit: cover;
+  filter: brightness(80%); /* Прибрано "блимання" фону */
 }
 
-
-a{
-  font-size: 20px;
-}
-img{
-  border-radius: 15px;
-
-}
 #text-soon{
   padding-left: 250px;
   font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(255, 255, 0, 0.5); /* Ослаблена підсвітка */
 }
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -48,107 +42,76 @@ img{
   padding: 20px;
 }
 
-.left-block {
-  
-}
-
 .right-block {
- 
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Вирівнювання контенту на початок */
+  align-items: center;
+  height: 100%;
+  gap: 10px; /* Відстань між заголовком і текстом */
+}
+.right-block a{
+  margin-right: 250px;
 }
 
-/* Стилі для верхнього меню */
+/* Верхнє меню */
 .top-menu {
   background: rgba(94, 94, 94, 0.137);
   box-shadow: 3px 0 7px rgba(0,0,0,.3);
   padding: 20px;
   position: relative;
-}
-
-.top-menu:after {
-  content: "";
-  display: table;
-  clear: both;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-logo {
-  display: inline-block;
   font-size: 35px;
   color: yellow;
+  text-shadow: 2px 2px 4px rgba(255, 255, 0, 0.5); /* Ослаблена підсвітка */
+  margin-left: 20px; /* Прив'язано до лівого краю */
 }
 
 .menu-main {
   list-style: none;
   margin: 0;
   padding: 0;
-  float: right;
+  display: flex;
 }
 
 .menu-main li {
   display: inline-block;
+  margin-right: 20px;
 }
 
 .menu-main a {
   text-decoration: none;
-  display: block;
-  position: relative;
-  line-height: 61px;
-  padding-left: 20px;
   font-size: 18px;
-  letter-spacing: 2px;
   font-weight: bold;
   color: yellow;
-  transition: .3s linear;
+  transition: color 0.3s ease;
 }
 
-.menu-main a::before {
-  content: "";
-  width: 9px;
-  height: 9px;
-  background: #00a2ff;
-  position: absolute;
-  left: 50%;
-  transform: rotate(45deg) translateX(6.5px);
-  opacity: 0;
-  transition: .3s linear;
+.menu-main a:hover {
+  color: #ffcc00;
 }
 
-.menu-main a:hover:before {
-  opacity: 1;
-}
-
-
-
-/* Адаптація для малих екранів */
+/* Адаптація */
 @media (max-width: 768px) {
-  .left-block{
-    order: 1;
-  }
-  .right-block {
-    order: 2;
+  .container {
+    flex-direction: column;
   }
 
   .menu-main {
-      float: none;
-      padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .top-menu {
-      text-align: center;
-      padding: 20px 0 0 0;
-  }
-
-  .menu-main a {
-      padding: 0 10px;
-  }
-
-  .menu-main a:before {
-      transform: rotate(45deg) translateX(-6px);
-  }
-}
-
-@media (max-width: 600px) {
   .menu-main li {
-      display: block;
+    margin-bottom: 10px;
   }
 }
 
@@ -162,7 +125,8 @@ footer {
   align-items: center;
   color: #cacbc7;
   padding: calc(var(--sizeindex) * 1.4);
-  background: linear-gradient(rgba(0, 0, 253, 0), rgba(255, 255, 255, 0.039));
+  background: rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
   text-align: center;
   z-index: 1;
 }
