@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maks Games</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="script.js"></script>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-F22BKWLS03"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+    
+          gtag('config', 'G-F22BKWLS03');
+        </script>
+        
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-list" id="nav-menu">
+            <li><a href="#section1">Головна</a></li>
+            <li><a href="#section2">Про нас</a></li>
+            <li><a href="#section3">Наші ігри</a></li>
+            <li><a href="#section4">Контакти</a></li>
+        </ul>
+    </nav>
+    
+    
+    <div class="wrapper">
+        <section class="intro">
+            <video autoplay muted loop id="background-video">
+            <source src="files/background.mp4" type="video/mp4">
+                Ваш браузер не підтримує відео.
+            </video>
+            <h1>Maks Games</h1>
+        </section>
+        
+
+        <main class="main-content">
+            <section id="section1" class="content">
+                <h2>Новини</h2>
+                <p>Новий дизайн сайту. Скоро бета реліз Dranken DrunkenElixir!</p>
+            </section>
+
+
+            <section id="section2" class="about">
+                <h2>Про нас</h2>
+                <p>Maks Games - це компанія в якій ви знайдете ігри на ваш смак, від легких враншиз до AAA проєктів</p>
+            </section>
+            
+
+            <section id="section3" class="games">
+                <h2>Наші ігри</h2>
+                <div class="games-container">
+                    <div class="game-card">
+                        <h3>DrunkenElixir</h3>
+                        <p>Допоможи Петру Івановичу знайти і повернути самогонний апарат</p>
+                        <button class="button">Дізнатися більше</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="advertisement">
+                <h2>Донат</h2>
+                <p>Можеш допомогти розробкі грошима</p>
+                <button>Дізнатися більше</button>
+            </section>
+        </main>
+
+        <footer>
+            <a>©Copyright 2025 by MaxGames.dev. All rights reserved.</a>
+        </footer>
+    </div>
+</body>
+</html>
