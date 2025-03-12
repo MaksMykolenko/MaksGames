@@ -190,7 +190,7 @@ body {
 
 /* Додано більший відступ знизу, щоб видно було контейнери */
 .content:last-of-type {
-    margin-bottom: 90px;
+    margin-bottom: 10px;
 }
 
 /* Послідовне з’явлення */
