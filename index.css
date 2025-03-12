@@ -19,7 +19,10 @@ body {
 .h2 {
     font-family: 'Orbitron', sans-serif;
 }
-
+/* Шоб дефолтний текст при наведенні світився клано */
+.content p:hover{
+    color: #9717fa;
+}
 
 /* Стилі для Navbar */
 .navbar {
@@ -60,7 +63,7 @@ body {
 }
 
 .nav-list li a:hover {
-    color: #00aaff;
+    color: #9000ff;
 }
 
 /* Бургер-меню (кнопка) */
@@ -105,13 +108,10 @@ body {
     }
 }
 
-
-
-    /* Щоб контент не ховався під navbar */
-    .content {
-        padding-top: 80px;
-    }
-
+/* Щоб контент не ховався під navbar */
+.content {
+    padding-top: 80px;
+}
 
 /* Затемнене фонове зображення */
 .intro {
@@ -127,6 +127,7 @@ body {
     letter-spacing: 2px;
     overflow: hidden; /* Запобігає виходу відео за межі */
 }
+
 
 /* Відео як фон */
 #background-video {
@@ -178,11 +179,8 @@ body {
 .content {
     opacity: 0;
     animation: fadeInUp 1s ease-out forwards;
-    background: #1b1b1b; /* Темніше */
-    border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.07);
     padding: 40px;
-    font-size: clamp(1em, 1.2vw, 1.2em);
+    font-size: clamp(1.2em, 1.2vw, 2.2em);
     color: #dcdcdc;
     line-height: 1.8;
     max-width: 900px;
@@ -195,12 +193,6 @@ body {
     margin-bottom: 90px;
 }
 
-/* Додаємо ефект підняття при наведенні */
-.content:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
-}
-
 /* Послідовне з’явлення */
 .content:nth-child(2) { animation-delay: 0.6s; }
 .content:nth-child(3) { animation-delay: 1.2s; }
@@ -208,9 +200,8 @@ body {
 .content:nth-child(5) { animation-delay: 2.3s; }
 
 /* Заголовки */
-/* Заголовки */
 .content h2 {
-    color: #00aaff; /* Більш насичений синій */
+    color: #9000ff;
     font-size: clamp(1.5em, 2vw, 2em);
     text-transform: uppercase;
     margin-bottom: 18px;
@@ -219,7 +210,7 @@ body {
 
 /* Кнопка для реклами */
 .content button {
-    background: #00aaff;
+    background: #9717fa;
     color: black;
     border: none;
     padding: 12px 25px;
@@ -231,7 +222,7 @@ body {
 }
 
 .content button:hover {
-    background: #00aaff;
+    background: #9000ff;
     transform: scale(1.05);
 }
 
@@ -243,11 +234,116 @@ body {
     text-align: justify;
 }
 
+/* блок з новинами і про нас */
+.about {
+    width: 900px;
+    height: 200px;
+    border: 2px solid #9000ff;
+    border-radius: 20px;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .about {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+        border-radius: 15px;
+    }
+}
+
+.about1 {
+    width: 900px;
+    height: 200px;
+    border: 2px solid #9000ff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .about1 {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+        border-radius: 15px;
+    }
+}
+/* блок з донатом */
+.about2 {
+    width: 900px;
+    height: 280px;
+    border: 2px solid #9000ff;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.about2 p{
+    text-align: center;
+}
+
+.about2 button {
+    padding: 10px 20px;
+    background-color: #9000ff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about2 button:hover {
+    background-color: #6a00cc;
+}
+
+@media (max-width: 768px) {
+    .about2 {
+        margin-left: 20px;
+        width: 90%;
+        height: auto;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .about2 h2 {
+        font-size: 1.5em;
+    }
+
+    .about2 p {
+        font-size: 1em;
+    }
+
+    .about2 button {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
+
+
+.games-container{
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    padding: 40px;
+    font-size: clamp(1.2em, 1.2vw, 2.2em);
+    color: #dcdcdc;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 200px;
+    justify-items: center;
+}
+
 
 /* Стиль картки */
 .game-card {
-    width: 55%;
-    max-width: 380px;
+    width: 200%;
+    max-width: 400px;
     background: #222;
     padding: 25px;
     border-radius: 15px;
@@ -259,12 +355,6 @@ body {
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Ефект наведення */
-.game-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(0, 170, 255, 0.25);
-}
-
 /* Зображення */
 .game-card img {
     width: 100%;
@@ -274,15 +364,11 @@ body {
     transition: transform 0.3s ease;
 }
 
-.game-card:hover img {
-    transform: scale(1.05);
-}
-
 /* Заголовок гри */
 .game-card h3 {
     font-size: clamp(1.6em, 1.8vw, 1.8em);
     margin-bottom: 12px;
-    color: #00aaff;
+    color: #9000ff;
 }
 
 /* Опис гри */
@@ -291,10 +377,11 @@ body {
     color: #d0d0d0;
     margin-bottom: 20px;
     opacity: 0.9;
+    text-align: left;
 }
 
 .game-card .button {
-    background: #00aaff;
+    background: #9717fa;
     color: black;
     border: none;
     padding: 12px 25px;
@@ -306,7 +393,7 @@ body {
 }
 
 .game-card .button:hover {
-    background: #0088cc;
+    background: #9000ff;
     transform: scale(1.05);
 }
 
@@ -340,6 +427,68 @@ body {
     flex: 1;
 }
 
+/* Контейнер з командою */
+
+.team-container{
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    padding: 40px;
+    font-size: clamp(1.2em, 1.2vw, 2.2em);
+    color: #dcdcdc;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.team-container h3{
+    color: #9000ff;
+}
+
+.team-container p{
+    text-align: center;
+}
+
+.team-card{
+    width: 80%;
+    max-width: 380px;
+    background: #222;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.images-follow{
+    padding: 30px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.images-follow img {
+    max-width: 90%;            /* Адаптація до ширини контейнера */
+    height: 50%;              /* Збереження пропорцій */
+    margin: 10px;              /* Відступи між зображеннями */
+}
+
+/* Оптимізація для маленьких екранів */
+@media (max-width: 768px) {
+    .images-follow img {
+        max-width: 25%;            /* Адаптація до ширини контейнера */
+        height: auto;              /* Збереження пропорцій */
+        margin: 10px;              /* Відступи між зображеннями */
+    }
+}
+
 /* Футер */
 footer {
     bottom: 0;
@@ -357,4 +506,8 @@ footer a {
     text-decoration: none; /* Прибирає підкреслення */
     color: inherit; /* Залишає стандартний колір */
     transition: color 0.3s ease; /* Додає плавний ефект при наведенні */
+}
+
+footer:hover{
+    color:#9000ff; 
 }
