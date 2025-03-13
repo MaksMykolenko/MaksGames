@@ -428,8 +428,7 @@ body {
 }
 
 /* Контейнер з командою */
-
-.team-container{
+.team-container {
     opacity: 0;
     animation: fadeInUp 1s ease-out forwards;
     padding: 40px;
@@ -441,9 +440,10 @@ body {
     text-align: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    justify-items: center;
+    gap: 10px;
+    justify-items: center; 
 }
+
 
 .team-container h3{
     color: #9000ff;
@@ -453,19 +453,73 @@ body {
     text-align: center;
 }
 
-.team-card{
-    width: 80%;
+.team-card {
+    width: 90%;
     max-width: 380px;
-    background: #222;
-    padding: 25px;
+    height: 350px;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.team-card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.team-card:hover .card-back {
+    transform: rotateY(0deg);
+    z-index: 1;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    text-align: center;
-    margin: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
+    transition: transform 0.6s, z-index 0.6s;
 }
+
+.card-front {
+    background: #222;
+    color: #fff;
+}
+
+.card-back {
+    background: #222;
+    color: #fff;
+    transform: rotateY(180deg);
+    padding: 10px;
+    padding-bottom: 20px;
+}
+.card-back h4 {
+    margin-top: 1px;  /* Зменшений верхній відступ */
+    margin-bottom: 1px;  /* Зменшений нижній відступ */
+    font-size: 20px; /* Опціонально — трохи менший розмір */
+}
+
+.card-front, .card-back{
+    color: #9000ff;
+}
+
+.img-social {
+    padding: 30px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Менший minmax для іконок */
+}
+
+.img-social img {
+    max-width: 40px;  /* Задаємо фіксовану ширину для іконок */
+    height: auto;      /* Автоматична висота для збереження пропорцій */
+    margin: 10px;      /* Відступи між зображеннями */
+}
+
 
 .images-follow{
     padding: 30px;
