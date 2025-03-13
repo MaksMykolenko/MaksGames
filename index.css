@@ -462,14 +462,6 @@ body {
     cursor: pointer;
 }
 
-.team-card:hover .card-front {
-    transform: rotateY(180deg);
-}
-
-.team-card:hover .card-back {
-    transform: rotateY(0deg);
-    z-index: 1;
-}
 
 .card-front, .card-back {
     width: 100%;
@@ -505,6 +497,14 @@ body {
 
 .card-front, .card-back{
     color: #9000ff;
+}
+
+.team-card.flipped .card-front {
+    transform: rotateY(180deg);
+}
+
+.team-card.flipped .card-back {
+    transform: rotateY(0deg);
 }
 
 .img-social {
