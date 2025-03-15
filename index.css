@@ -435,19 +435,28 @@ body {
 
 /* Контейнер з командою */
 .team-container {
-    opacity: 0;
-    animation: fadeInUp 1s ease-out forwards;
+    display: flex;
+    overflow-x: auto; /* Додає горизонтальний скрол */
+    scroll-snap-type: x mandatory; /* Прив'язка до позицій елементів */
+    gap: 35px;
     padding: 40px;
-    font-size: clamp(1.2em, 1.2vw, 2.2em);
-    color: #dcdcdc;
-    line-height: 1.8;
     max-width: 1000px;
     margin: 50px auto;
     text-align: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 10px;
-    justify-items: center; 
+}
+
+/* Ховаємо скролбар */
+.team-container::-webkit-scrollbar {
+    display:none;
+}
+
+.team-card {
+    flex: 0 0 auto; /* Фіксований розмір для прокрутки */
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+    scroll-snap-align: center; /* Прив'язка до позицій при прокрутці */
 }
 
 @media (max-width: 768px) {

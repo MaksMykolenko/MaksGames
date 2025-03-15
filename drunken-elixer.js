@@ -5,7 +5,7 @@ document.getElementById("menu-toggle").addEventListener("click", function () {
 
 //button flip-back
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".team-card").forEach((card) => {
+    document.querySelectorAll(".character-card").forEach((card) => {
         const moreBtn = card.querySelector(".card-front .button");
         const backBtn = card.querySelector(".card-back .button");
 
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-const container = document.querySelector('.team-container');
+const container = document.querySelector('.character-container');
 
 // Прокрутка мишею
 container.addEventListener('wheel', (event) => {
@@ -47,3 +47,4 @@ container.addEventListener('touchmove', (event) => {
     container.scrollLeft += diff;
     startX = moveX;
 });
+
