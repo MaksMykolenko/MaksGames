@@ -482,6 +482,13 @@ body {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .team-card {
+    width: 100%;
+
+    }
+
+}
 
 .card-front, .card-back {
     width: 100%;

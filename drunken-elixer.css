@@ -271,6 +271,12 @@ body {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .character-card {
+    width: 100%;
+    }
+}
+
 /* Переворот картки */
 .card-front, .card-back {
     width: 100%;
