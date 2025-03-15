@@ -355,6 +355,12 @@ body {
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
+@media (max-width: 768px) {
+    .game-card {
+        max-width: 300px;
+    }
+}
+
 /* Зображення */
 .game-card img {
     width: 100%;
@@ -444,6 +450,11 @@ body {
     justify-items: center; 
 }
 
+@media (max-width: 768px) {
+    .team-container {
+        gap: 45px;
+    }
+}
 
 .team-container h3{
     color: #9000ff;
