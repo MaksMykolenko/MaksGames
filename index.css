@@ -485,9 +485,7 @@ body {
 @media (max-width: 768px) {
     .team-card {
     width: 100%;
-
     }
-
 }
 
 .card-front, .card-back {
@@ -533,6 +531,20 @@ body {
 .team-card.flipped .card-back {
     transform: rotateY(0deg);
 }
+
+#dima-lavrinenko-back {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('files/team-cards/dimazdevochkami.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#dima-lavrinenko-back h3, 
+#dima-lavrinenko-back h4 {
+    background-color: #000000c4;
+}
+
+
 
 .img-social {
     padding: 30px;
