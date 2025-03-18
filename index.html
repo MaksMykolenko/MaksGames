@@ -6,6 +6,10 @@
     <title>NeoFlux</title>
     <link rel="stylesheet" href="index.css">
     <script defer src="script.js"></script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollSmoother.min.js"></script>
 
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-F22BKWLS03"></script>
@@ -34,16 +38,18 @@
             <li><a href="#section6">Донат</a></li>
         </ul>
     </nav>
+
     
-    
-    <div class="wrapper">
-        <section class="intro">
-            <video autoplay muted loop id="background-video">
-            <source src="files/background.mp4" type="video/mp4">
-                Ваш браузер не підтримує відео.
-            </video>
-            <h2>NeoFlux</h2>
-        </section>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <div class="wrapper">
+                <section class="intro">
+                    <video autoplay muted loop id="background-video">
+                    <source src="files/background.mp4" type="video/mp4">
+                    Ваш браузер не підтримує відео.
+                    </video>
+                    <h2>NeoFlux</h2>
+                </section>
         
 
         <main class="main-content">
@@ -133,33 +139,36 @@
             
 
             <section id="section5" class="content">
-                <h2>Слідкуй за NeoFlux Games</h2>
-                <div class="images-follow">
-                    <a href="https://t.me/+fMqw9QD_N4YwOTgy" target="_blank">
-                        <img src="files/Telegram_icon.png" alt="telegram">
-                    </a>
-                    <a href="https://x.com/NeofluxG3047" target="_blank">
-                        <img src="files/twitter_icon.png" alt="twitter">
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCkfsBD9oA96i4Mf3Q9m7gEw" target="_blank">
-                        <img src="files/Youtube_icon.png" alt="youtube">
-                    </a>
-                </div>
-                
+                    <h2>Слідкуй за NeoFlux Games</h2>
+                    <div class="images-follow">
+                        <a href="https://t.me/+fMqw9QD_N4YwOTgy" target="_blank">
+                            <img src="files/Telegram_icon.png" alt="telegram">
+                        </a>
+                        <a href="https://x.com/NeofluxG3047" target="_blank">
+                            <img src="files/twitter_icon.png" alt="twitter">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCkfsBD9oA96i4Mf3Q9m7gEw" target="_blank">
+                            <img src="files/Youtube_icon.png" alt="youtube">
+                        </a>
+                    </div>  
             </section>
 
-            <section id="section6" class="content">
-               <div class = "about2">
-                    <h2>Донат</h2>
-                    <p>Можеш допомогти розробкі грошима</p>
-                    <button>Дізнатися більше</button>
-                </div>
-            </section>
+                <section id="section6" class="content">
+                    <div class = "about2">
+                        <h2>Донат</h2>
+                        <p>Можеш допомогти розробкі грошима</p>
+                        <button>Дізнатися більше</button>
+                    </div>
+                </section>
+       
+       
         </main>
 
-        <footer>
-            <a>©Copyright 2025 by NeoFlux Games. All rights reserved.</a>
-        </footer>
+                <footer>
+                    <a>©Copyright 2025 by NeoFlux Games. All rights reserved.</a>
+                </footer>
+            </div>
+        </div>
     </div>
 </body>
 </html>

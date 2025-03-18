@@ -27,15 +27,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const container = document.querySelector('.team-container');
 
-// Прокрутка мишею
-container.addEventListener('wheel', (event) => {
-    event.preventDefault();
-    container.scrollLeft += event.deltaY;
+let isDragging = false;
+let startX;
+let scrollLeft;
+
+// Додаємо анімацію для плавного переміщення карток
+container.style.scrollBehavior = 'smooth'; // плавна прокрутка при використанні скролу
+
+// Коли натискаєш на контейнер
+container.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+    container.style.cursor = 'grabbing';  // Змінюємо вигляд курсору
+});
+
+// Коли рухаєш мишкою
+container.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - startX) * 2;  // Множимо для швидкості
+    container.scrollLeft = scrollLeft - walk;
+});
+
+// Коли відпускаєш мишку
+container.addEventListener('mouseup', () => {
+    isDragging = false;
+    container.style.cursor = 'grab';  // Відновлюємо вигляд курсору
+});
+
+// Якщо мишка залишає область контейнера
+container.addEventListener('mouseleave', () => {
+    isDragging = false;
+    container.style.cursor = 'grab';  // Відновлюємо вигляд курсору
 });
 
 // Підтримка свайпів (тачскріни)
-let startX = 0;
-
 container.addEventListener('touchstart', (event) => {
     startX = event.touches[0].clientX;
 });
@@ -47,3 +75,21 @@ container.addEventListener('touchmove', (event) => {
     container.scrollLeft += diff;
     startX = moveX;
 });
+
+
+//scroll
+document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+    // Ініціалізація ScrollSmoother
+    ScrollSmoother.create({
+        wrapper: "#smooth-wrapper",
+        content: "#smooth-content",
+        smooth: 1.5,
+        effects: false,
+        normalizeScroll: true,
+    });
+});
+
+
+
