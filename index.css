@@ -350,8 +350,8 @@ section {
 
 /* Стиль картки */
 .game-card {
-    width: 200%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 420px;
     background: #222;
     padding: 25px;
     border-radius: 15px;
